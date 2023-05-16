@@ -1,3 +1,4 @@
+import { clear } from '@testing-library/user-event/dist/clear';
 import React, {createContext, useContext, useState} from 'react';
 import {v4 as uuidv4} from 'uuid'; //random benzersiz id için uuid kütüphanesini kurduk
 
@@ -24,13 +25,21 @@ export const TodoProvider = ({children}) => {
 		const item = todos[update_item_index];
 		item.completed = !item.completed;
 		setTodos(cloned_todos);
-    }
+    };
+
+    const deleteTodo = (id) => {
+        const cloned_todos = [...todos];
+		const delete_item_index = cloned_todos.findIndex(todo => todo.id === id);
+		cloned_todos.splice(delete_item_index,1); // start:silmeye baslanacak index number:kac tane silinecek
+		setTodos(cloned_todos);
+    };
 
     const values = {
         todos,
         setTodos,
         addTodo,
-        toggleTodo
+        toggleTodo,
+        deleteTodo,
     }
 
     return <TodoContext.Provider value = {values}>{children}</TodoContext.Provider>
