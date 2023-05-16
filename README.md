@@ -2,6 +2,26 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+## About the project
+- In this simple to-do application, the expression we get from the input is added to the todo list.
+- When the checkbox at the beginning of a to-do element in the list is clicked, it becomes visible with a strikethrough. If you have completed the task, you can press this button.
+- To the right of each element in the list there is an "X" button to delete the corresponding todo. You can use this if you want to delete one by one.
+- You can filter with the "All", "Active" and "Completed" buttons.
+- With "Clear completed" you can sing all completed todos at once.
+
+
+## SCREENSHOTS
+### ALL 
+<img src="https://github.com/humeyrakoseoglu/todo-app/assets/71442681/7c326c80-ad85-4cc1-8000-4222bd40e378" >
+
+### ACTIVE 
+<img src="https://github.com/humeyrakoseoglu/todo-app/assets/71442681/b3550bb7-ed72-4914-aa57-c25ef79c2aad" >
+
+### COMPLETED 
+<img src="https://github.com/humeyrakoseoglu/todo-app/assets/71442681/ac775159-c98d-40c2-a67d-ac03a3f29af8" >
+
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -33,38 +53,6 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
