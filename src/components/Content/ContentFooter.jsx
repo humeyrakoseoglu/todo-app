@@ -1,28 +1,33 @@
+import {useTodo} from "../../context/TodoContext";
+
 function ContentFooter() {
-  return (
-  <footer className="footer">
-		<span className="todo-count">
-			<strong>2 </strong>
-			items left
-		</span>
 
-		<ul className="filters">
-			<li>
-				<a href="#/" className="selected">All</a>
-			</li>
-			<li>
-				<a href="#/">Active</a>
-			</li>
-			<li>
-				<a href="#/">Completed</a>
-			</li>
-		</ul>
+	const {todos, filter, setFilter, clearCompleted} = useTodo();
 
-		<button className="clear-completed">
-			Clear completed
-		</button>
-	</footer>
-  );
+	return (
+	<footer className="footer">
+			<span className="todo-count">
+				<strong>{todos.length} </strong>
+				item{todos.length > 1 && 's'  } left
+			</span>
+	
+			<ul className="filters">
+				<li>
+					<a href="#/" onClick={()=> setFilter("all")} className={filter === "all" ? "selected" : ""}>All</a>
+				</li>
+				<li>
+					<a href="#/" onClick={()=> setFilter("active")} className={filter === "active" ? "selected" : ""}>Active</a>
+				</li>
+				<li>
+					<a href="#/" onClick={()=> setFilter("completed")} className={filter === "completed" ? "selected" : ""}>Completed</a>
+				</li>
+			</ul>
+	
+			<button className="clear-completed"  onClick={clearCompleted}>
+				Clear completed
+			</button>
+		</footer>
+	);
 }
     
 export default ContentFooter;    

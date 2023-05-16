@@ -1,10 +1,10 @@
-import { clear } from '@testing-library/user-event/dist/clear';
 import React, {createContext, useContext, useState} from 'react';
 import {v4 as uuidv4} from 'uuid'; //random benzersiz id için uuid kütüphanesini kurduk
 
 const TodoContext = createContext();
 
 export const TodoProvider = ({children}) => {
+    const [filter, setFilter] = useState('all');
     const [todos, setTodos] = useState([{
         id:1,
         text:'Learn React',
@@ -34,12 +34,23 @@ export const TodoProvider = ({children}) => {
 		setTodos(cloned_todos);
     };
 
+    const clearCompleted = () => {
+        const cloned_todos = [...todos];
+		const new_todos = cloned_todos.filter((todo) => !todo.completed);
+		setTodos(new_todos);
+    };
+
+    
+
     const values = {
         todos,
         setTodos,
         addTodo,
         toggleTodo,
         deleteTodo,
+        filter, 
+        setFilter,
+        clearCompleted
     }
 
     return <TodoContext.Provider value = {values}>{children}</TodoContext.Provider>
